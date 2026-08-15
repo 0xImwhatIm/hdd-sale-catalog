@@ -18,3 +18,10 @@
 - 勾選多顆硬碟並即時計算參考小計。
 - 產生可複製的選購／詢價文字。
 
+## 資料來源與維護
+
+- Notion 主資料庫：[硬碟資產資料庫](https://app.notion.com/p/9e78ea10c0a84a168643450329461d8c?v=037782b8ba6348c891aed8680cb3f7ab&source=copy_link)。
+- Notion 索引頁：[硬碟檢測索引](https://app.notion.com/p/3bddffffcd80812f864dfe1fcff29e5a?source=copy_link)。
+- Google Drive 固定證據資料夾：[照片與 DriveDx 原始檔](https://drive.google.com/drive/folders/1TugJHh-sImRgufQYZ9kWZRaG59p75mHN?usp=sharing)。
+- 網站目前使用 `app/data/catalog.ts` 的同步快照；新增硬碟時只需更新資料快照並重新建置／部署，前端篩選、分級、統計與詢價清單會依陣列長度自動延伸。
+- 對外只顯示序號末四碼；完整序號與原始報告仍保留在受控的資料來源中。
