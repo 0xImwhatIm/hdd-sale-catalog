@@ -17,7 +17,6 @@ export type CatalogRecord = {
   notes: string;
   lastTested: string | null;
   serialSuffix: string | null;
-  notionUrl: string | null;
   drivePhotoUrl: string | null;
   drivePhotoName: string | null;
   driveReportUrls: string[];
@@ -25,9 +24,6 @@ export type CatalogRecord = {
 };
 
 export const sourceMeta = {
-  "notionDatabaseUrl": "https://app.notion.com/p/9e78ea10c0a84a168643450329461d8c",
-  "notionIndexUrl": "https://app.notion.com/p/3bddffffcd80812f864dfe1fcff29e5a",
-  "notionDataSourceUrl": "collection://7edf732b-ea3c-4ebc-b580-4206931b3c18",
   "driveFolderUrl": "https://drive.google.com/drive/folders/1TugJHh-sImRgufQYZ9kWZRaG59p75mHN?usp=sharing",
   "syncedAt": "2026-08-15T05:27:55.609Z",
   "driveEvidenceFileCount": 38
@@ -53,7 +49,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 100%，但 UDMA CRC Error Count 166 並列為 1 項警告。CRC 通常與線材、外接盒或傳輸介面有關；建議更換介面後重新檢測並做完整讀寫測試，再決定用途。",
     "lastTested": "2026-08-15",
     "serialSuffix": "6228",
-    "notionUrl": "https://app.notion.com/3bddffffcd8081639249c442ed9df35d",
     "drivePhotoUrl": "https://drive.google.com/file/d/1RYl7qiTl_rjEuWGBt_V9WxWai0Om0RqC/view?usp=drivesdk",
     "drivePhotoName": "001.png",
     "driveReportUrls": [
@@ -84,7 +79,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 95.3%，05／C5／C6 均為 0。CRC=8 為歷史傳輸錯誤記錄，應確認線材與外接盒後持續觀察。適合一般資料或次要用途，重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "K3HD",
-    "notionUrl": "https://app.notion.com/3bddffffcd80810b9a0cddf1064c516a",
     "drivePhotoUrl": "https://drive.google.com/file/d/1ivNtBwku3wsI2l3E5hZ8tVKdWGDy_u57/view?usp=drivesdk",
     "drivePhotoName": "002.png",
     "driveReportUrls": [
@@ -131,7 +125,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：Advanced SMART FAILED／Overall Health BAD 0%。關鍵值：05=663、C5=0、C6=0、CRC=2。已列為不建議使用；若仍有資料應先移出，不可作唯一備份或重要用途。",
     "lastTested": "2026-08-15",
     "serialSuffix": "0471",
-    "notionUrl": "https://app.notion.com/3bddffffcd8081b797cbcf6cdd15d29a",
     "drivePhotoUrl": "https://drive.google.com/file/d/1Pb6ehRQ6HA9eo2J1wLApvzgCkQqlP8ui/view?usp=drivesdk",
     "drivePhotoName": "003.png",
     "driveReportUrls": [
@@ -164,7 +157,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 97.5%，Issues found 0；05／C5／C6／CRC 均為 0。依本次檢測列為 A｜良好，可作工作暫存或一般用途；重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "RUY3",
-    "notionUrl": "https://app.notion.com/3bddffffcd808113b3accda3d5621b0b",
     "drivePhotoUrl": "https://drive.google.com/file/d/1V-DMHW9iao9iFlV599AzHA-JeUBQ4QRJ/view?usp=drivesdk",
     "drivePhotoName": "004.png",
     "driveReportUrls": [
@@ -195,7 +187,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 98.0%，05／C5／C6 均為 0。通電 2180 小時，依使用時數列為 B｜可用。適合一般資料或次要用途，重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "0339",
-    "notionUrl": "https://app.notion.com/3bddffffcd8081b08e8fce3ae4d8eaa3",
     "drivePhotoUrl": "https://drive.google.com/file/d/1EfFb-QLnEtTozvB-ZtN8XrEO11nX9gw6/view?usp=drivesdk",
     "drivePhotoName": "005.png",
     "driveReportUrls": [
@@ -224,7 +215,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 96.9%，Issues found 0；05／C5／C6／CRC 均為 0。依本次檢測列為 A｜良好，可作工作暫存或一般用途；重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "K1NE",
-    "notionUrl": "https://app.notion.com/3bddffffcd8081c79db6e7060cae2af7",
     "drivePhotoUrl": "https://drive.google.com/file/d/1OWrEcO0EPkktf_G13n7bbdtCWEilniE4/view?usp=drivesdk",
     "drivePhotoName": "006.png",
     "driveReportUrls": [
@@ -255,7 +245,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 96.6%，05／C5／C6 均為 0。通電 1174 小時，依使用時數列為 B｜可用。適合一般資料或次要用途，重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "23H0",
-    "notionUrl": "https://app.notion.com/3bddffffcd80819f8142f09b12dab27b",
     "drivePhotoUrl": "https://drive.google.com/file/d/1MiARRHYuOkLC4jvY1YUoRpOUtVrRCnoq/view?usp=drivesdk",
     "drivePhotoName": "007.png",
     "driveReportUrls": [
@@ -302,7 +291,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 95.3%，Issues found 0；05／C5／C6／CRC 均為 0。依本次檢測列為 A｜良好，可作工作暫存或一般用途；重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "SSX6",
-    "notionUrl": "https://app.notion.com/3bddffffcd8081dfb86dec4ed3b38c56",
     "drivePhotoUrl": "https://drive.google.com/file/d/1Bo_dDuuL1F0UcyVdEIyaVU1LlJZ-OIkF/view?usp=drivesdk",
     "drivePhotoName": "008.png",
     "driveReportUrls": [
@@ -349,7 +337,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 96.6%，05／C5／C6 均為 0。CRC=1 為歷史傳輸錯誤記錄，應確認線材與外接盒後持續觀察。適合一般資料或次要用途，重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "3987",
-    "notionUrl": "https://app.notion.com/3bddffffcd8081c38b60dfbd8bcbcf01",
     "drivePhotoUrl": "https://drive.google.com/file/d/1fvNOVXJj2kXd5F1UucVq5x2U88UajLhG/view?usp=drivesdk",
     "drivePhotoName": "009.png",
     "driveReportUrls": [
@@ -396,7 +383,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 96.2%，Issues found 0；05／C5／C6／CRC 均為 0。依本次檢測列為 A｜良好，可作工作暫存或一般用途；重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "FJNA",
-    "notionUrl": "https://app.notion.com/3bddffffcd8081bc9300de83b7e86fec",
     "drivePhotoUrl": "https://drive.google.com/file/d/1Q6g2g2Z2aZnc0JdwqU87I4nfSMaifpYW/view?usp=drivesdk",
     "drivePhotoName": "010.png",
     "driveReportUrls": [
@@ -427,7 +413,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 95.6%，Issues found 0；05／C5／C6／CRC 均為 0。依本次檢測列為 A｜良好，可作工作暫存或一般用途；重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "JKPS",
-    "notionUrl": "https://app.notion.com/3bddffffcd808153a161cddf5640b97d",
     "drivePhotoUrl": "https://drive.google.com/file/d/13p-xEQpISWb5yobI_gkqEv_jvHrM8RXt/view?usp=drivesdk",
     "drivePhotoName": "011.png",
     "driveReportUrls": [
@@ -474,7 +459,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 98.7%，05／C5／C6 均為 0。CRC=4 為歷史傳輸錯誤記錄，應確認線材與外接盒後持續觀察。適合一般資料或次要用途，重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "7LAD",
-    "notionUrl": "https://app.notion.com/3bddffffcd80819abf0ff5e775cff915",
     "drivePhotoUrl": "https://drive.google.com/file/d/185ASbpV5T8X6sR5MFh--Aq1I9QRF5ApJ/view?usp=drivesdk",
     "drivePhotoName": "012.png",
     "driveReportUrls": [
@@ -521,7 +505,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：Advanced SMART FAILING／Overall Health N/A 98.7%。關鍵值：05=0、C5=1171、C6=0、CRC=3。已列為不建議使用；若仍有資料應先移出，不可作唯一備份或重要用途。",
     "lastTested": "2026-08-15",
     "serialSuffix": "0LWX",
-    "notionUrl": "https://app.notion.com/3bddffffcd80819db25ef9e9dbef2499",
     "drivePhotoUrl": "https://drive.google.com/file/d/1fZVC-RIEusJveS6YWYRktgApWRHwhgUR/view?usp=drivesdk",
     "drivePhotoName": "013.png",
     "driveReportUrls": [
@@ -568,7 +551,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 98.1%，05／C5／C6 均為 0。CRC=2 為歷史傳輸錯誤記錄，應確認線材與外接盒後持續觀察。適合一般資料或次要用途，重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "3896",
-    "notionUrl": "https://app.notion.com/3bddffffcd80817195bae2606622a908",
     "drivePhotoUrl": "https://drive.google.com/file/d/1JrvME9eBfUAn5O5FqWRgriL_TmV1ArG0/view?usp=drivesdk",
     "drivePhotoName": "014.png",
     "driveReportUrls": [
@@ -601,7 +583,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 98.1%，但列出 1 項警告；CRC=43。建議先檢查線材、外接盒與介面並重新檢測，完成完整讀寫測試後再決定用途。",
     "lastTested": "2026-08-15",
     "serialSuffix": "4657",
-    "notionUrl": "https://app.notion.com/3bddffffcd8081219e15c658ab73cdf7",
     "drivePhotoUrl": "https://drive.google.com/file/d/1TlUgGQQTF9uYr-UdD-sOvLCj7x8QZ5sC/view?usp=drivesdk",
     "drivePhotoName": "015.png",
     "driveReportUrls": [
@@ -634,7 +615,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 95.3%，Issues found 0；05／C5／C6／CRC 均為 0。依本次檢測列為 A｜良好，可作工作暫存或一般用途；重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "YRJA",
-    "notionUrl": "https://app.notion.com/3bddffffcd808131a2abffa4ebe40188",
     "drivePhotoUrl": "https://drive.google.com/file/d/1hJ8USt9yL5c8geoQ31zr4HDnv7F8ydiQ/view?usp=drivesdk",
     "drivePhotoName": "016.png",
     "driveReportUrls": [
@@ -681,7 +661,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 99.3%，但列出 1 項警告；CRC=44。建議先檢查線材、外接盒與介面並重新檢測，完成完整讀寫測試後再決定用途。",
     "lastTested": "2026-08-15",
     "serialSuffix": "UDL8",
-    "notionUrl": "https://app.notion.com/3bddffffcd80810595fced321787380e",
     "drivePhotoUrl": "https://drive.google.com/file/d/18VMPn24SYzq5h2YU3wK8ukWBo-tXzbXl/view?usp=drivesdk",
     "drivePhotoName": "017.png",
     "driveReportUrls": [
@@ -728,7 +707,6 @@ export const catalogRecords: CatalogRecord[] = [
     "notes": "DriveDx：SMART OK／Overall Health GOOD 98.7%，Issues found 0；05／C5／C6／CRC 均為 0。依本次檢測列為 A｜良好，可作工作暫存或一般用途；重要資料仍需另有備份。",
     "lastTested": "2026-08-15",
     "serialSuffix": "2Y9Y",
-    "notionUrl": "https://app.notion.com/3bddffffcd8081b4be09f593478079d3",
     "drivePhotoUrl": "https://drive.google.com/file/d/1LioHZm5ZA2oMSUSql624y6NKCltRaJsN/view?usp=drivesdk",
     "drivePhotoName": "018.png",
     "driveReportUrls": [

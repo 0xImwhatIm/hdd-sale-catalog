@@ -35,6 +35,12 @@ test("server-renders the HDD asset catalog", async () => {
   assert.match(html, /HDD Sale Catalog/);
   assert.match(html, /DriveDx/);
   assert.match(html, /1TugJHh-sImRgufQYZ9kWZRaG59p75mHN/);
+  assert.match(html, /檢測證據集中在 Google Drive/);
+  assert.doesNotMatch(html, /app\.notion\.com/);
+  assert.equal(
+    html.match(/1TugJHh-sImRgufQYZ9kWZRaG59p75mHN/g)?.length,
+    1,
+  );
   assert.doesNotMatch(html, /Your site is taking shape|Building your site/);
   assert.doesNotMatch(html, /react-loading-skeleton/);
 });
@@ -51,6 +57,7 @@ test("keeps the catalog data-driven and the starter preview removed", async () =
   assert.match(page, /catalogRecords\.length/);
   assert.match(catalog, /export const catalogRecords/);
   assert.match(catalog, /driveFolderUrl/);
+  assert.doesNotMatch(catalog, /notionUrl|app\.notion\.com/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   const previewEntries = await readdir(new URL("app/_sites-preview/", templateRoot));
   assert.deepEqual(previewEntries, []);

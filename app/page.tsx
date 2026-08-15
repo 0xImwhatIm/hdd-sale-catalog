@@ -105,9 +105,7 @@ function RecordCard({
           </div>
           <p className="record-note">{record.notes}</p>
           <div className="evidence-links">
-            <a href={sourceMeta.driveFolderUrl} target="_blank" rel="noreferrer">開啟 Drive 證據資料夾 ↗</a>
-            {record.drivePhotoUrl ? <a href={record.drivePhotoUrl} target="_blank" rel="noreferrer">查看 {record.drivePhotoName ?? "DriveDx 截圖"} ↗</a> : null}
-            {record.notionUrl ? <a href={record.notionUrl} target="_blank" rel="noreferrer">查看 Notion 原始列 ↗</a> : null}
+            {record.drivePhotoUrl ? <a href={record.drivePhotoUrl} target="_blank" rel="noreferrer">查看 {record.drivePhotoName ?? "DriveDx 截圖"}（Google Drive）↗</a> : null}
           </div>
         </div>
       </details>
@@ -191,7 +189,6 @@ export default function Home() {
         <nav className="header-nav" aria-label="主要導覽">
           <a href="#catalog">型錄</a>
           <a href="#how-it-works">如何詢價</a>
-          <a href={sourceMeta.driveFolderUrl} target="_blank" rel="noreferrer" className="header-drive-link">Drive 證據 ↗</a>
         </nav>
       </header>
 
@@ -202,7 +199,7 @@ export default function Home() {
           <p className="hero-description">二手硬碟健康履歷、品項比較與詢價清單。先看 SMART 與檢測證據，再決定哪些值得帶回去。</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#catalog">開始挑選 <span>↓</span></a>
-            <a className="button button-quiet" href={sourceMeta.driveFolderUrl} target="_blank" rel="noreferrer">開啟 Google Drive 資料夾 <span>↗</span></a>
+            <a className="button button-quiet" href="#how-it-works">查看證據來源 <span>↓</span></a>
           </div>
         </div>
         <div className="hero-ledger" aria-label="資料來源摘要">
@@ -219,7 +216,7 @@ export default function Home() {
       </section>
 
       <section className="stats-strip" aria-label="型錄統計">
-        <div><span>資料來源</span><strong>Notion + Google Drive</strong></div>
+        <div><span>證據來源</span><strong>Google Drive</strong></div>
         <div><span>顯示筆數</span><strong>{filteredRecords.length} / {catalogRecords.length}</strong></div>
         <div><span>已選詢價</span><strong>{selectedRecords.length} 顆</strong></div>
         <div><span>參考小計</span><strong>{formatPrice(subtotal)}</strong></div>
@@ -262,7 +259,7 @@ export default function Home() {
             <p className="quote-footnote">多顆採購可依數量及品項組合另行報價。</p>
           </div>
 
-          <div className="source-card" id="how-it-works"><p className="eyebrow">03 / SOURCE & FLOW</p><h3>證據保持在原處。</h3><p>型錄使用 Notion 的盤點資料；照片與 DriveDx 原始檔固定放在 Google Drive，同一個資料夾持續維護。</p><a href={sourceMeta.driveFolderUrl} target="_blank" rel="noreferrer">前往 Google Drive ↗</a><div className="source-meta"><span>最後同步</span><strong>{formatDate(sourceMeta.syncedAt)}</strong><span>資料列</span><strong>{catalogRecords.length}</strong></div></div>
+          <div className="source-card" id="how-it-works"><p className="eyebrow">03 / EVIDENCE SOURCE</p><h3>檢測證據集中在 Google Drive。</h3><p>照片與 DriveDx 原始報告固定放在同一個資料夾；開啟後可查看完整截圖與文字報告。</p><a href={sourceMeta.driveFolderUrl} target="_blank" rel="noreferrer">開啟 Google Drive 證據資料夾 ↗</a><div className="source-meta"><span>最後同步</span><strong>{formatDate(sourceMeta.syncedAt)}</strong><span>資料列</span><strong>{catalogRecords.length}</strong></div></div>
         </aside>
       </section>
 
