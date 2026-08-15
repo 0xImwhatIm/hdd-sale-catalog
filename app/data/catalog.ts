@@ -30,7 +30,6 @@ export const sourceMeta = {
   "notionDataSourceUrl": "collection://7edf732b-ea3c-4ebc-b580-4206931b3c18",
   "driveFolderUrl": "https://drive.google.com/drive/folders/1TugJHh-sImRgufQYZ9kWZRaG59p75mHN?usp=sharing",
   "syncedAt": "2026-08-15T05:27:55.609Z",
-  "recordCount": 18,
   "driveEvidenceFileCount": 38
 } as const;
 
