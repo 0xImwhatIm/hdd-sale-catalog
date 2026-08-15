@@ -45,6 +45,9 @@ jobs:
         run: |
           test -f dist/client/index.html
           test -f dist/client/404.html
+          test -f dist/client/.nojekyll
+          test -n "$(find dist/client -type f -path '*/_next/static/css/*.css' -print -quit)"
+          test -n "$(find dist/client -type f -path '*/_next/static/chunks/*.js' -print -quit)"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
