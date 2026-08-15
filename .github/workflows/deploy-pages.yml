@@ -41,13 +41,22 @@ jobs:
       - name: Build static site
         run: npm run build
 
+      - name: Move static assets outside Jekyll private paths
+        run: |
+          asset_dir="$(find dist/client -type d -path '*/_next' -print -quit)"
+          test -n "$asset_dir"
+          asset_parent="$(dirname "$asset_dir")"
+          mv "$asset_dir" "$asset_parent/assets"
+          find dist/client -type f \( -name '*.html' -o -name '*.js' -o -name '*.json' -o -name '*.rsc' -o -name '_headers' \) \
+            -exec perl -pi -e 's#/_next/#/assets/#g' {} +
+
       - name: Verify static entrypoint
         run: |
           test -f dist/client/index.html
           test -f dist/client/404.html
           test -f dist/client/.nojekyll
-          test -n "$(find dist/client -type f -path '*/_next/static/css/*.css' -print -quit)"
-          test -n "$(find dist/client -type f -path '*/_next/static/chunks/*.js' -print -quit)"
+          test -n "$(find dist/client -type f -path '*/assets/static/css/*.css' -print -quit)"
+          test -n "$(find dist/client -type f -path '*/assets/static/chunks/*.js' -print -quit)"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
