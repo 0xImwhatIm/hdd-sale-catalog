@@ -25,11 +25,11 @@ export type CatalogRecord = {
 
 export const sourceMeta = {
   "driveFolderUrl": "https://drive.google.com/drive/folders/1TugJHh-sImRgufQYZ9kWZRaG59p75mHN?usp=sharing",
-  "syncedAt": "2026-08-15T05:27:55.609Z",
-  "driveEvidenceFileCount": 38
+  "syncedAt": "2026-08-15T12:43:25.531Z",
+  "driveEvidenceFileCount": 43
 } as const;
 
-export const catalogRecords: CatalogRecord[] = [
+const catalogRecordsSeed: CatalogRecord[] = [
   {
     "id": "001",
     "brand": "WD",
@@ -733,5 +733,169 @@ export const catalogRecords: CatalogRecord[] = [
       "DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_10-44-39-605.txt",
       "DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_10-30-24-260.txt"
     ]
+  },
+  {
+    "id": "019",
+    "brand": "WD",
+    "model": "WDC WD2003FZEX-00Z4SA0",
+    "capacity": "2.0 TB",
+    "grade": "B",
+    "gradeLabel": "B｜可用",
+    "smartStatus": "正常",
+    "hours": 474,
+    "powerCycle": 140,
+    "reallocated": 0,
+    "pending": 0,
+    "offlineUncorrectable": 0,
+    "crc": 1,
+    "retailPrice": 1100,
+    "suggestedUse": "一般資料",
+    "notes": "DriveDx：SMART OK／Overall Health GOOD 97.6%，Issues found 0；05／C5／C6 均為 0，CRC=1 為歷史傳輸錯誤記錄。建議確認線材、外接盒與介面後持續觀察；可作一般資料或次要用途，重要資料仍需另有備份。",
+    "lastTested": "2026-08-15",
+    "serialSuffix": "SXRN",
+    "drivePhotoUrl": "https://drive.google.com/file/d/1T8TsMUfWEkn82II0FabJRsQZgM0gngSC/view?usp=drivesdk",
+    "drivePhotoName": "019.png",
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1aK1QDgLzY5dqm3h9CQTgKk2GuRAW6LUB/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1w5fIsMTrLs8u3Dfzoeu0guYVMlt_GKwp/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_20-42-13-278.txt",
+      "DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_15-39-47-197.txt"
+    ]
+  },
+  {
+    "id": "020",
+    "brand": "WD",
+    "model": "WDC WD2003FZEX-00Z4SA0",
+    "capacity": "2.0 TB",
+    "grade": "B",
+    "gradeLabel": "B｜可用",
+    "smartStatus": "正常",
+    "hours": 114,
+    "powerCycle": 37,
+    "reallocated": 0,
+    "pending": 0,
+    "offlineUncorrectable": 0,
+    "crc": 1,
+    "retailPrice": 1100,
+    "suggestedUse": "一般資料",
+    "notes": "DriveDx：SMART OK／Overall Health GOOD 98.7%，Issues found 0；05／C5／C6 均為 0，CRC=1 為歷史傳輸錯誤記錄。建議確認線材、外接盒與介面後持續觀察；可作一般資料或次要用途，重要資料仍需另有備份。",
+    "lastTested": "2026-08-15",
+    "serialSuffix": "E2M0",
+    "drivePhotoUrl": "https://drive.google.com/file/d/1KDLgvq9Ywg-D3M8XSLtfH5PaMsJK7Aya/view?usp=drivesdk",
+    "drivePhotoName": "020.png",
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1VwHoklcFdeSzsoFsb4os0LDQAYD1V_KB/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_15-33-17-610.txt"
+    ]
   }
 ];
+
+const driveEvidenceById: Record<string, Pick<CatalogRecord, "driveReportUrls" | "driveReportNames">> = {
+  "001": {
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1CXhZyThXLOwu12zpmMtuy3PvsMdSuhgQ/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1WFZKwN2bITRDpiZ9Hgj-yzfc_p2G2YIM/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "DriveDxReport_WDC WD2002FAEX-007BA0_2026-08-15_11-22-29-281.txt",
+      "DriveDxReport_WDC WD2002FAEX-007BA0_2026-08-15_11-13-25-875.txt"
+    ]
+  },
+  "002": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1caWaNULSVi-8EpINEBsninVDtU1DJN2S/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_11-09-23-331.txt"]
+  },
+  "003": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1KPn5Eb4kfNPE31-TkVDZCIkhdyhfkh9Z/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD1002FAEX-00Z3A0_2026-08-15_11-10-55-832.txt"]
+  },
+  "004": {
+    "driveReportUrls": ["https://drive.google.com/file/d/11fn5RNmfT3NTlv2sYQ2-T82z8NdmGmH1/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD1003FZEX-00MK2A0_2026-08-15_11-08-08-942.txt"]
+  },
+  "005": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1kpzEnOXcyKdC929i3H7MWRwwK8BgJ69z/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2000F9YZ-09N20L0_2026-08-15_11-05-53-569.txt"]
+  },
+  "006": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1-ihfplaWdCEte446YmR6jV-c9llGM5B8/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD1003FZEX-00MK2A0_2026-08-15_11-07-03-804.txt"]
+  },
+  "007": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1lyLimFQbAkEGEIDbppryfObMT8jxyF2r/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_11-01-47-955.txt"]
+  },
+  "008": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1yk6eL6Ddvl_CiS1oUOeV9WxQvGJ586-s/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_11-03-08-626.txt"]
+  },
+  "009": {
+    "driveReportUrls": ["https://drive.google.com/file/d/15WOxV0KQk64nMyQdBJqCF9QPXde4LwSM/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_11-04-25-169.txt"]
+  },
+  "010": {
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1igVCZZoPJ_GH9G_S8B3IC2YeRUNZrkWR/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1QFzLRsHrmwBKkB-AA_KZfLoUsz4ibMaF/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "DriveDxReport_TOSHIBA MG04ACA300E_2026-08-15_10-59-41-572.txt",
+      "DriveDxReport_TOSHIBA MG04ACA300E_2026-08-15_11-19-07-488.txt"
+    ]
+  },
+  "011": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1oRppcIHAIAglYxMxgmBhmimkx8aQS31y/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_10-56-05-470.txt"]
+  },
+  "012": {
+    "driveReportUrls": ["https://drive.google.com/file/d/15e4AUV-BvsQvH0HSPH285amixvq5pDhp/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_10-57-40-181.txt"]
+  },
+  "013": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1wkVnJkdMd1zLGP0sY0QPK-IJGKWG2dY3/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_10-52-41-551.txt"]
+  },
+  "014": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1Dpe66eL9ig9W3erFaxacNscHZaca6PYd/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD1002FAEX-00Z3A0_2026-08-15_10-54-32-143.txt"]
+  },
+  "015": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1me7RmLX1XlF0qjcKYHngm5e0iTWutnwD/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD1002FAEX-00Z3A0_2026-08-15_10-48-51-802.txt"]
+  },
+  "016": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1DnY4SOTASJ07m2_QSD2mtUgin0lWcGTz/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_10-30-24-260.txt"]
+  },
+  "017": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1gVbtmgQuv2lviKStIm7bK6UiBdxhQtvh/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_10-44-39-605.txt"]
+  },
+  "018": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1OrBozXZZB9RfmWdmRa0LWiff0Olvi8db/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_10-46-32-001.txt"]
+  },
+  "019": {
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1aK1QDgLzY5dqm3h9CQTgKk2GuRAW6LUB/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1w5fIsMTrLs8u3Dfzoeu0guYVMlt_GKwp/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_20-42-13-278.txt",
+      "DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_15-39-47-197.txt"
+    ]
+  },
+  "020": {
+    "driveReportUrls": ["https://drive.google.com/file/d/1VwHoklcFdeSzsoFsb4os0LDQAYD1V_KB/view?usp=drivesdk"],
+    "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_15-33-17-610.txt"]
+  }
+};
+
+export const catalogRecords: CatalogRecord[] = catalogRecordsSeed.map((record) => {
+  const evidence = driveEvidenceById[record.id];
+  return evidence ? { ...record, ...evidence } : record;
+});
