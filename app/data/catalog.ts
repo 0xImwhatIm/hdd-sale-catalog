@@ -25,8 +25,8 @@ export type CatalogRecord = {
 
 export const sourceMeta = {
   "driveFolderUrl": "https://drive.google.com/drive/folders/1TugJHh-sImRgufQYZ9kWZRaG59p75mHN?usp=sharing",
-  "syncedAt": "2026-08-15T12:43:25.531Z",
-  "driveEvidenceFileCount": 43
+  "syncedAt": "2026-08-17T16:28:46.734Z",
+  "driveEvidenceFileCount": 46
 } as const;
 
 const catalogRecordsSeed: CatalogRecord[] = [
@@ -791,6 +791,60 @@ const catalogRecordsSeed: CatalogRecord[] = [
     "driveReportNames": [
       "DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_15-33-17-610.txt"
     ]
+  },
+  {
+    "id": "021",
+    "brand": "WD",
+    "model": "WDC WD1002FAEX-00Z3A0",
+    "capacity": "1.0 TB",
+    "grade": "C",
+    "gradeLabel": "C｜需注意",
+    "smartStatus": "注意",
+    "hours": 515,
+    "powerCycle": 44,
+    "reallocated": 0,
+    "pending": 0,
+    "offlineUncorrectable": 1,
+    "crc": 0,
+    "retailPrice": 350,
+    "suggestedUse": "待整理",
+    "notes": "清理流程 PASS。smartctl SMART 自我評估 PASSED，短測試完成且無錯誤；05=0、C5=0、C6=1、CRC=0。C6 Offline Uncorrectable=1，列為 C｜需注意，待補 DriveDx AFTER 報告與複測後再決定用途。",
+    "lastTested": "2026-08-17",
+    "serialSuffix": "5539",
+    "drivePhotoUrl": "https://drive.google.com/file/d/1NWTMg9xMwPaLyh7zQUQk4SANoxIaaY1D/view?usp=drivesdk",
+    "drivePhotoName": "021 SMART.png",
+    "driveReportUrls": [],
+    "driveReportNames": []
+  },
+  {
+    "id": "022",
+    "brand": "WD",
+    "model": "WDC WD1003FZEX-00MK2A0",
+    "capacity": "1.0 TB",
+    "grade": "A",
+    "gradeLabel": "A｜良好",
+    "smartStatus": "正常",
+    "hours": 173,
+    "powerCycle": 23,
+    "reallocated": 0,
+    "pending": 0,
+    "offlineUncorrectable": 0,
+    "crc": 0,
+    "retailPrice": 900,
+    "suggestedUse": "剪輯／工作暫存",
+    "notes": "清理流程 PASS。smartctl SMART overall-health PASSED；05／C5／C6／CRC 均為 0，無錯誤紀錄。通電 173 小時、Power Cycle 23 次，列為 A｜良好，可作工作暫存或一般用途；重要資料仍需另有備份。",
+    "lastTested": "2026-08-17",
+    "serialSuffix": "0LJ5",
+    "drivePhotoUrl": null,
+    "drivePhotoName": null,
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1umb53hIuDsaRttaUjY7gmAXdpOaGLvtJ/view?usp=drivesdk",
+      "https://drive.google.com/file/d/18quv3s_qvHb-ThyaXK96f_9pi-nhCB6N/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "022_SMART_AFTER.txt",
+      "022_SUMMARY.txt"
+    ]
   }
 ];
 
@@ -892,6 +946,17 @@ const driveEvidenceById: Record<string, Pick<CatalogRecord, "driveReportUrls" | 
   "020": {
     "driveReportUrls": ["https://drive.google.com/file/d/1VwHoklcFdeSzsoFsb4os0LDQAYD1V_KB/view?usp=drivesdk"],
     "driveReportNames": ["DriveDxReport_WDC WD2003FZEX-00Z4SA0_2026-08-15_15-33-17-610.txt"]
+  },
+  "021": {
+    "driveReportUrls": [],
+    "driveReportNames": []
+  },
+  "022": {
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1umb53hIuDsaRttaUjY7gmAXdpOaGLvtJ/view?usp=drivesdk",
+      "https://drive.google.com/file/d/18quv3s_qvHb-ThyaXK96f_9pi-nhCB6N/view?usp=drivesdk"
+    ],
+    "driveReportNames": ["022_SMART_AFTER.txt", "022_SUMMARY.txt"]
   }
 };
 
