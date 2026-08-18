@@ -25,8 +25,8 @@ export type CatalogRecord = {
 
 export const sourceMeta = {
   "driveFolderUrl": "https://drive.google.com/drive/folders/1TugJHh-sImRgufQYZ9kWZRaG59p75mHN?usp=sharing",
-  "syncedAt": "2026-08-17T16:28:46.734Z",
-  "driveEvidenceFileCount": 46
+  "syncedAt": "2026-08-17T16:28:34.797Z",
+  "driveEvidenceFileCount": 50
 } as const;
 
 const catalogRecordsSeed: CatalogRecord[] = [
@@ -845,6 +845,40 @@ const catalogRecordsSeed: CatalogRecord[] = [
       "022_SMART_AFTER.txt",
       "022_SUMMARY.txt"
     ]
+  },
+  {
+    "id": "023",
+    "brand": "WD",
+    "model": "WDC WD1002FAEX-00Z3A0",
+    "capacity": "1.0 TB",
+    "grade": "D",
+    "gradeLabel": "D｜不建議使用",
+    "smartStatus": "異常",
+    "hours": 1042,
+    "powerCycle": 145,
+    "reallocated": 0,
+    "pending": 100,
+    "offlineUncorrectable": 100,
+    "crc": 1,
+    "retailPrice": 100,
+    "suggestedUse": "不建議使用",
+    "notes": "SMART_BEFORE：SMART overall-health PASSED，但 05=0、C5/197=100、C6/198=100、CRC/199=1，列為 D｜不建議使用。清理流程結果 FAIL；SMART AFTER 在目前外接盒無法讀取（SMART PENDING／SMART Status Not Supported）。需更換相容外接盒重新檢測，暫不列入詢價。",
+    "lastTested": "2026-08-18",
+    "serialSuffix": "0832",
+    "drivePhotoUrl": null,
+    "drivePhotoName": null,
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/12Plh6Wle87khLSdUYsvKiZMTLKyt0tlz/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1AQQ0Z8Qqqm5Q2ZcSIbH3Uo2C4advezbv/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1BnzaZEyQH5W_07kCflfDNXo8YV5xjwRO/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1uF7jIvy0cBd1QKjPWxl7OHo0mW9jgzxZ/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "023_SMART_BEFORE.txt",
+      "023_SMART_AFTER.txt",
+      "023_SUMMARY.txt",
+      "023_diskutil_AFTER.txt"
+    ]
   }
 ];
 
@@ -957,6 +991,20 @@ const driveEvidenceById: Record<string, Pick<CatalogRecord, "driveReportUrls" | 
       "https://drive.google.com/file/d/18quv3s_qvHb-ThyaXK96f_9pi-nhCB6N/view?usp=drivesdk"
     ],
     "driveReportNames": ["022_SMART_AFTER.txt", "022_SUMMARY.txt"]
+  },
+  "023": {
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/12Plh6Wle87khLSdUYsvKiZMTLKyt0tlz/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1AQQ0Z8Qqqm5Q2ZcSIbH3Uo2C4advezbv/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1BnzaZEyQH5W_07kCflfDNXo8YV5xjwRO/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1uF7jIvy0cBd1QKjPWxl7OHo0mW9jgzxZ/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "023_SMART_BEFORE.txt",
+      "023_SMART_AFTER.txt",
+      "023_SUMMARY.txt",
+      "023_diskutil_AFTER.txt"
+    ]
   }
 };
 
