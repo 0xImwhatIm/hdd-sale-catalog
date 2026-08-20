@@ -25,8 +25,8 @@ export type CatalogRecord = {
 
 export const sourceMeta = {
   "driveFolderUrl": "https://drive.google.com/drive/folders/1TugJHh-sImRgufQYZ9kWZRaG59p75mHN?usp=sharing",
-  "syncedAt": "2026-08-19T23:25:42.114Z",
-  "driveEvidenceFileCount": 78
+  "syncedAt": "2026-08-20T22:33:01.282Z",
+  "driveEvidenceFileCount": 86
 } as const;
 
 const catalogRecordsSeed: CatalogRecord[] = [
@@ -1117,6 +1117,74 @@ const catalogRecordsSeed: CatalogRecord[] = [
       "030_SUMMARY.txt",
       "030_diskutil_AFTER.txt"
     ]
+  },
+  {
+    "id": "031",
+    "brand": "WD",
+    "model": "WDC WD1002FAEX-00Z3A0",
+    "capacity": "1.0 TB",
+    "grade": "D",
+    "gradeLabel": "D｜不建議使用",
+    "smartStatus": "異常",
+    "hours": 337,
+    "powerCycle": 59,
+    "reallocated": 0,
+    "pending": 0,
+    "offlineUncorrectable": 0,
+    "crc": 0,
+    "retailPrice": 100,
+    "suggestedUse": "不建議使用",
+    "notes": "清理流程 PASS。SMART BEFORE overall-health PASSED；05／C5／C6／CRC 均為 0，SMART Error Log 顯示 No Errors Logged。通電 337 小時、Power Cycle 59 次。SMART AFTER 在目前外接盒讀取失敗（identify failed／A mandatory SMART command failed），清理摘要標示 SMART PENDING - USE COMPATIBLE ENCLOSURE；需更換相容外接盒重新執行 AFTER SMART 與短測試後，才能重新判定 READY／REVIEW／FAIL。現階段列為 D｜不建議使用，暫不列入詢價。",
+    "lastTested": "2026-08-20",
+    "serialSuffix": "1265",
+    "drivePhotoUrl": null,
+    "drivePhotoName": null,
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1QHJkIqXfEt2zlp6RKP1E8mZilv3ZFXP-/view?usp=drivesdk",
+      "https://drive.google.com/file/d/17pKr5JxftVKSaeRIEpDeR5kO5fhyqpTd/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1lxQfoQDX9q8c-xKxGW6MexZq-qzQbmub/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1ANXqLq0014Aetj0zYWolpbP0_Mn-XRMS/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "031_SMART_BEFORE.txt",
+      "031_SMART_AFTER.txt",
+      "031_SUMMARY.txt",
+      "031_diskutil_AFTER.txt"
+    ]
+  },
+  {
+    "id": "032",
+    "brand": "WD",
+    "model": "WDC WD2003FZEX-00Z4SA0",
+    "capacity": "2.0 TB",
+    "grade": "A",
+    "gradeLabel": "A｜良好",
+    "smartStatus": "正常",
+    "hours": 558,
+    "powerCycle": 140,
+    "reallocated": 0,
+    "pending": 0,
+    "offlineUncorrectable": 0,
+    "crc": 0,
+    "retailPrice": 1300,
+    "suggestedUse": "剪輯／工作暫存",
+    "notes": "清理流程 PASS。SMART AFTER overall-health PASSED；05／C5／C6／CRC 均為 0，SMART Error Log 顯示 No Errors Logged。通電 558 小時、Power Cycle 140 次，列為 A｜良好，可作工作暫存或一般用途；重要資料仍需另有備份。diskutil AFTER 在目前外接盒顯示 SMART Status Not Supported，但 smartctl AFTER 已成功讀取 SMART，並以該報告作為本次健康判定依據。",
+    "lastTested": "2026-08-21",
+    "serialSuffix": "0JFP",
+    "drivePhotoUrl": null,
+    "drivePhotoName": null,
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1ArSYrC3ma2yFcRMJa9L0HMpR3nJ76Tsu/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1szQIsb6pvtxijC58n8EcQO1SAhI67DCp/view?usp=drivesdk",
+      "https://drive.google.com/file/d/10p4Tv0tjxZICgPG1Ax3kxuGq-AB2hBCz/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1LYN2r4naHbMgH1BBZzLBEhE6NSyP4mwI/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "032_SMART_BEFORE.txt",
+      "032_SMART_AFTER.txt",
+      "032_SUMMARY.txt",
+      "032_diskutil_AFTER.txt"
+    ]
   }
 ];
 
@@ -1340,6 +1408,34 @@ const driveEvidenceById: Record<string, Pick<CatalogRecord, "driveReportUrls" | 
       "030_SMART_AFTER.txt",
       "030_SUMMARY.txt",
       "030_diskutil_AFTER.txt"
+    ]
+  },
+  "031": {
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1QHJkIqXfEt2zlp6RKP1E8mZilv3ZFXP-/view?usp=drivesdk",
+      "https://drive.google.com/file/d/17pKr5JxftVKSaeRIEpDeR5kO5fhyqpTd/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1lxQfoQDX9q8c-xKxGW6MexZq-qzQbmub/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1ANXqLq0014Aetj0zYWolpbP0_Mn-XRMS/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "031_SMART_BEFORE.txt",
+      "031_SMART_AFTER.txt",
+      "031_SUMMARY.txt",
+      "031_diskutil_AFTER.txt"
+    ]
+  },
+  "032": {
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1ArSYrC3ma2yFcRMJa9L0HMpR3nJ76Tsu/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1szQIsb6pvtxijC58n8EcQO1SAhI67DCp/view?usp=drivesdk",
+      "https://drive.google.com/file/d/10p4Tv0tjxZICgPG1Ax3kxuGq-AB2hBCz/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1LYN2r4naHbMgH1BBZzLBEhE6NSyP4mwI/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "032_SMART_BEFORE.txt",
+      "032_SMART_AFTER.txt",
+      "032_SUMMARY.txt",
+      "032_diskutil_AFTER.txt"
     ]
   }
 };
