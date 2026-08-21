@@ -25,8 +25,8 @@ export type CatalogRecord = {
 
 export const sourceMeta = {
   "driveFolderUrl": "https://drive.google.com/drive/folders/1TugJHh-sImRgufQYZ9kWZRaG59p75mHN?usp=sharing",
-  "syncedAt": "2026-08-20T22:33:01.282Z",
-  "driveEvidenceFileCount": 86
+  "syncedAt": "2026-08-21T11:43:07.974Z",
+  "driveEvidenceFileCount": 90
 } as const;
 
 const catalogRecordsSeed: CatalogRecord[] = [
@@ -1185,6 +1185,40 @@ const catalogRecordsSeed: CatalogRecord[] = [
       "032_SUMMARY.txt",
       "032_diskutil_AFTER.txt"
     ]
+  },
+  {
+    "id": "033",
+    "brand": "WD",
+    "model": "WDC WD2003FZEX-00Z4SA0",
+    "capacity": "2.0 TB",
+    "grade": "A",
+    "gradeLabel": "A｜良好",
+    "smartStatus": "正常",
+    "hours": 470,
+    "powerCycle": 117,
+    "reallocated": 0,
+    "pending": 0,
+    "offlineUncorrectable": 0,
+    "crc": 0,
+    "retailPrice": 1300,
+    "suggestedUse": "剪輯／工作暫存",
+    "notes": "清理流程 PASS。SMART BEFORE／AFTER 的型號與序號一致；AFTER overall-health PASSED，05／C5／C6／CRC 均為 0，SMART Error Log 顯示 No Errors Logged。通電 470 小時、Power Cycle 117 次，列為 A｜良好，可作剪輯、工作暫存或一般用途；重要資料仍需另有備份。SMART attribute 16 為廠商自訂欄位，報告未標示 WHEN_FAILED，且不影響本次核心健康指標判定。diskutil AFTER 在目前外接盒顯示 SMART Status Not Supported，但 smartctl AFTER 已成功讀取 SMART，並以該報告作為本次健康判定依據。",
+    "lastTested": "2026-08-21",
+    "serialSuffix": "PFL7",
+    "drivePhotoUrl": null,
+    "drivePhotoName": null,
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1c2PFg2ogApWIW720uAwJ5Wip1cNM7LN7/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1M1wYSx4mmiTFQsig-VXYleuRZyWpg83r/view?usp=drivesdk",
+      "https://drive.google.com/file/d/11VVwREG5gVfRu_QWr3bI0QWzZ-l0z5pM/view?usp=drivesdk",
+      "https://drive.google.com/file/d/17dKJFFaREeSPesiumVBHDd9fo1fNXBy4/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "033_SMART_BEFORE.txt",
+      "033_SMART_AFTER.txt",
+      "033_SUMMARY.txt",
+      "033_diskutil_AFTER.txt"
+    ]
   }
 ];
 
@@ -1436,6 +1470,20 @@ const driveEvidenceById: Record<string, Pick<CatalogRecord, "driveReportUrls" | 
       "032_SMART_AFTER.txt",
       "032_SUMMARY.txt",
       "032_diskutil_AFTER.txt"
+    ]
+  },
+  "033": {
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1c2PFg2ogApWIW720uAwJ5Wip1cNM7LN7/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1M1wYSx4mmiTFQsig-VXYleuRZyWpg83r/view?usp=drivesdk",
+      "https://drive.google.com/file/d/11VVwREG5gVfRu_QWr3bI0QWzZ-l0z5pM/view?usp=drivesdk",
+      "https://drive.google.com/file/d/17dKJFFaREeSPesiumVBHDd9fo1fNXBy4/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "033_SMART_BEFORE.txt",
+      "033_SMART_AFTER.txt",
+      "033_SUMMARY.txt",
+      "033_diskutil_AFTER.txt"
     ]
   }
 };
