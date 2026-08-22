@@ -25,8 +25,8 @@ export type CatalogRecord = {
 
 export const sourceMeta = {
   "driveFolderUrl": "https://drive.google.com/drive/folders/1TugJHh-sImRgufQYZ9kWZRaG59p75mHN?usp=sharing",
-  "syncedAt": "2026-08-22T06:54:22.992Z",
-  "driveEvidenceFileCount": 110
+  "syncedAt": "2026-08-22T08:50:55.430Z",
+  "driveEvidenceFileCount": 118
 } as const;
 
 const catalogRecordsSeed: CatalogRecord[] = [
@@ -1389,6 +1389,40 @@ const catalogRecordsSeed: CatalogRecord[] = [
       "038_SUMMARY.txt",
       "038_diskutil_AFTER.txt"
     ]
+  },
+  {
+    "id": "039",
+    "brand": "WD",
+    "model": "WDC WD1003FZEX-00MK2A0",
+    "capacity": "1.0 TB",
+    "grade": "C",
+    "gradeLabel": "C｜需注意",
+    "smartStatus": "注意",
+    "hours": 283,
+    "powerCycle": 25,
+    "reallocated": 0,
+    "pending": 2,
+    "offlineUncorrectable": 6,
+    "crc": 0,
+    "retailPrice": 350,
+    "suggestedUse": "待整理",
+    "notes": "清理流程 PASS（Single-pass ZERO overwrite）。SMART BEFORE／AFTER 的型號與序號一致；AFTER overall-health PASSED、SMART Error Log 顯示 No Errors Logged，但關鍵指標仍有 C5=2、C6=6，且 Multi-Zone Error Rate=6；05=0、CRC=0。C5 由 BEFORE 的 6 降至 AFTER 的 2，但 C6 仍為 6，不能視為正常良品，列為 C｜需注意；建議更換相容外接盒後重新檢測、執行短測試與完整讀寫測試，再決定用途。通電 283 小時、Power Cycle 25 次，AFTER 溫度 54°C。diskutil AFTER 在目前外接盒顯示 SMART Status Not Supported，但 smartctl AFTER 已成功讀取 SMART，並以該報告作為本次健康判定依據。",
+    "lastTested": "2026-08-22",
+    "serialSuffix": "KFN0",
+    "drivePhotoUrl": null,
+    "drivePhotoName": null,
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1YicuDkb3qVl0pbntd_wiq08Am1LuaDie/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1bkRNk3xLEFJakjVB13FqbluGpO1TT8Jm/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1nNxTTYnW0zIrfhdU46NEH9dYDSGyeELU/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1Q8SLe2BUhZfdjDqN7d7JcP3TG2Lt7clY/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "039_SMART_BEFORE.txt",
+      "039_SMART_AFTER.txt",
+      "039_SUMMARY.txt",
+      "039_diskutil_AFTER.txt"
+    ]
   }
 ];
 
@@ -1724,6 +1758,20 @@ const driveEvidenceById: Record<string, Pick<CatalogRecord, "driveReportUrls" | 
       "038_SMART_AFTER.txt",
       "038_SUMMARY.txt",
       "038_diskutil_AFTER.txt"
+    ]
+  },
+  "039": {
+    "driveReportUrls": [
+      "https://drive.google.com/file/d/1YicuDkb3qVl0pbntd_wiq08Am1LuaDie/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1bkRNk3xLEFJakjVB13FqbluGpO1TT8Jm/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1nNxTTYnW0zIrfhdU46NEH9dYDSGyeELU/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1Q8SLe2BUhZfdjDqN7d7JcP3TG2Lt7clY/view?usp=drivesdk"
+    ],
+    "driveReportNames": [
+      "039_SMART_BEFORE.txt",
+      "039_SMART_AFTER.txt",
+      "039_SUMMARY.txt",
+      "039_diskutil_AFTER.txt"
     ]
   }
 };
